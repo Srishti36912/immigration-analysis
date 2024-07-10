@@ -80,7 +80,7 @@ with st.spinner("Loading Data..."):
     cdf = df.groupby('continent')[years].sum() # group by continent and sum
     cdf['total'] = cdf.sum(axis=1)
     c1.dataframe(cdf,use_container_width=True)
-    figContinent = px.bar(cdf, x=cdf.index, y='total',title="Continent wise immigration")
+    figContinent = px.pie(cdf, names=cdf.index, values='total',title="Continent wise immigration")
     c2.plotly_chart(figContinent, use_container_width=True)
     figMap = px.choropleth(df,locations=df.index,locationmode='country names',color='total',
                            title="World Map", projection='natural earth', width=1000, height=700, template='plotly_dark')
