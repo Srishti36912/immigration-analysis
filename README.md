@@ -1,4 +1,5 @@
 # immigration data analysis
+<img src="img.png">
 
 ### Project summary
 The goal of this project is to analyze the United Nations dataset on international migration. The dataset contains information on the number of immigrants leaving countries per year (1980-2013).
@@ -25,5 +26,3 @@ pip install - requirements.txt
 streamlit run dashboard.py
 ```
 
-## Screenshot
-<img src="img/1.png">
