@@ -75,7 +75,7 @@ with st.spinner("Loading Data..."):
     c2.plotly_chart(figTopTen, use_container_width=True)
 
     st.header("continent wise analysis")
-    c1,c2,c3 = st.columns(3)
+    c1,c2 = st.columns(2)
     continents = df['continent'].unique().tolist()
     cdf = df.groupby('continent')[years].sum() # group by continent and sum
     cdf['total'] = cdf.sum(axis=1)
